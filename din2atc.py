@@ -30,10 +30,10 @@ def create_din_atc_dict(din_dict, atc_dict):
 
 
 def main():
-    din_dict = create_dict('drug.txt', 0, 3)
-    din_dict.update(create_dict('drug_ia.txt', 0, 3))
-    atc_dict = create_dict('ther.txt', 0, 1)
-    atc_dict.update(create_dict('ther_ia.txt', 0, 1))
+    din_dict = create_dict('data/drug.txt', 0, 3)
+    din_dict.update(create_dict('data/drug_ia.txt', 0, 3))
+    atc_dict = create_dict('data/ther.txt', 0, 1)
+    atc_dict.update(create_dict('data/ther_ia.txt', 0, 1))
     din_atc_dict = create_din_atc_dict(din_dict, atc_dict)
 
     cnt_no_atc = 0
@@ -42,7 +42,7 @@ def main():
             cnt_no_atc += 1
     print("din codes: " + str(len(din_atc_dict)) + ", din codes without atc:" + str(cnt_no_atc))
 
-    out_file = "din2atc.txt"
+    out_file = "results/din2atc.txt"
 
     num_keys = len(din_atc_dict)
     cnt = 0
