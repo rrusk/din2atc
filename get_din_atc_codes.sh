@@ -18,9 +18,9 @@ unzip -o ../download/drug.zip
 unzip -o ../download/drug_ia.zip
 cd ..
 # if nothing has changed just exit
-if ! git diff-index --quiet HEAD --; then
-  exit
-fi
+#if ! git diff-index --quiet HEAD --; then
+#  exit
+#fi
 # otherwise 
 if [ ! -d results ]; then
   mkdir results

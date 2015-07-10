@@ -56,7 +56,7 @@ def main():
                 cnt += 1
             f.write("]")
         print("File '" + str(out_file) + "' can be imported into mongo using something like: ")
-        print("mongoimport --jsonArray --db the_mongo_db --collection the_collection --file din2atc.txt")
+        print("mongoimport --jsonArray --db the_mongo_db --collection the_collection --drop --file din2atc.txt")
 
     except IOError as e:
         print("Error %d: %s '%s'" % (e.args[0], e.args[1], e.filename))
