@@ -25,7 +25,7 @@ def create_din_atc_dict(din_dict, atc_dict):
         next_value = atc_dict.get(key, default)
         if prev_value and prev_value != next_value:
             print("din: " + str(key) + " has values: " + str(prev_value) + " and " + str(next_value))
-        din_atc_dict[key] = next_value
+        din_atc_dict[din_dict[key]] = next_value
     return din_atc_dict
 
 
